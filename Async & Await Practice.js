@@ -20,8 +20,8 @@ callFunction();
 async function getCities(cityName) {
     const cityObject = await fetch(`https://geocode.xyz/${cityName}?json=1`)
     const jsonConvert = await cityObject.json();
-    console.log("The latitude is: " + jsonConvert.latt +
-        " The longitude is: " + jsonConvert.longt);
+    console.log(`The latitude for ${cityName} is: ` + jsonConvert.latt + "." +
+        ` The longitude for ${cityName} is: ` + jsonConvert.longt + ".");
 }
 
 getCities("charlotte");
